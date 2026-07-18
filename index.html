@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevClub — Formação FullStack Pro | Tudo que você precisa para virar Dev</title>
+<meta name="description" content="Front-end, back-end, projetos reais, mentoria e comunidade em um só lugar. A formação completa para sair do zero e se tornar um desenvolvedor fullstack.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-bracket">&lt;</span>DevClub<span class="logo-bracket">/&gt;</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-drop">
+        <button class="nav-drop-btn" aria-haspopup="true" aria-expanded="false">Formações
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-drop-panel">
+          <a href="#trilhas">Programação Front End</a>
+          <a href="#trilhas">Programação Back End</a>
+          <a href="#trilhas">Programação Full Stack</a>
+          <a href="#trilhas">React &amp; Node</a>
+          <a href="#mba">MBA em Inteligência Artificial</a>
+        </div>
+      </div>
+      <a href="#instrutor">Professores</a>
+      <a href="#depoimentos">Alunos</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#" class="area-aluno nav-mobile-only" data-open-modal="login">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span>Área do aluno</span>
+      </a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#" class="area-aluno" data-open-modal="login">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span>Área do aluno</span>
+      </a>
+      <a href="#" class="btn btn-primary btn-sm nav-cta" data-open-modal="matricula" data-interesse="Formação FullStack Pro">
+        <span>Quero ser aluno</span>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <canvas id="waveGridCanvas" class="wave-grid-canvas"></canvas>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+
+    <div class="hero-inner">
+      <p class="eyebrow center reveal"><span class="dot-pulse"></span>formação fullstack pro</p>
+      <h1 class="hero-title center reveal">
+        Tudo que você precisa<br>
+        para virar <span class="highlight">Dev</span>,<br>
+        em um só lugar.
+      </h1>
+      <p class="hero-sub center reveal">
+        Front-end, back-end, projetos reais, mentoria e uma comunidade inteira
+        estudando junto com você — do primeiro <code>&lt;div&gt;</code> ao primeiro emprego.
+      </p>
+      <div class="hero-actions center reveal">
+        <a href="#" class="btn btn-primary btn-lg" data-open-modal="matricula" data-interesse="Formação FullStack Pro">
+          <span>Quero fazer parte</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#caminho" class="btn btn-ghost btn-lg">
+          <span>Ver a trilha</span>
+        </a>
+      </div>
+      <div class="hero-proof reveal">
+        <div class="avatars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <p><strong class="count-up" data-target="30000">0</strong>+ mil alunos já passaram por aqui</p>
+      </div>
+
+      <div class="laptop-wrap reveal">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="editor-window" id="editorWindow">
+              <div class="editor-titlebar">
+                <div class="editor-dots"><span></span><span></span><span></span></div>
+                <div class="editor-tabs" id="editorTabs">
+                  <span class="tab active" data-tab="0">index.html</span>
+                  <span class="tab" data-tab="1">style.css</span>
+                  <span class="tab" data-tab="2">app.js</span>
+                </div>
+              </div>
+              <div class="editor-body">
+                <div class="editor-gutter" id="editorGutter"></div>
+                <pre class="editor-code" id="editorCode"><code id="codeContent"></code><span class="type-caret" id="typeCaret"></span></pre>
+              </div>
+              <div class="editor-statusbar">
+                <span class="status-branch">⎇ main</span>
+                <span class="status-msg" id="statusMsg">compilando…</span>
+              </div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="terminal-toast" id="terminalToast">
+          <span class="toast-check">✓</span> build compilado — 0 erros
+        </div>
+        <div class="float-badge float-badge-1">React</div>
+        <div class="float-badge float-badge-2">Node.js</div>
+        <div class="float-badge float-badge-3">JavaScript</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOGOS / EMPRESAS ================= -->
+  <section class="empresas-strip">
+    <p class="empresas-label reveal">alunos atuando em vagas de tecnologia em empresas de todos os tamanhos</p>
+    <div class="marquee">
+      <div class="marquee-track" id="empresasTrack"></div>
+    </div>
+  </section>
+
+  <!-- ================= FORMAÇÕES SCROLL ================= -->
+  <section class="formacoes" id="trilhas">
+    <div class="section-head reveal">
+      <p class="eyebrow">// o que você pode aprender</p>
+      <h2>Formações completas para aprender<br>tudo do zero ao avançado.</h2>
+    </div>
+    <div class="marquee marquee-mask">
+      <div class="marquee-track marquee-slow" id="formacoesTrack"></div>
+    </div>
+  </section>
+
+  <!-- ================= MÉTODO / STACK ================= -->
+  <section class="metodo" id="metodo">
+    <div class="section-head reveal">
+      <p class="eyebrow">// o método</p>
+      <h2>Aprenda as tecnologias que o<br>mercado mais pede — do zero.</h2>
+      <p class="section-sub">Teoria sem prática é só slide bonito. Cada módulo termina em algo que roda no navegador.</p>
+    </div>
+
+    <div class="stack-card reveal">
+      <div class="stack-card-bg" aria-hidden="true"></div>
+      <p class="stack-kicker">stack completa</p>
+      <h3>Front-end, back-end e as ferramentas do dia a dia de um dev</h3>
+      <div class="stack-grid" id="stackGrid"></div>
+            <a href="#" class="btn btn-primary" data-open-modal="matricula" data-interesse="Formação FullStack Pro">
+        <span>Quero aprender essa stack</span>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="method-grid">
+      <article class="method-card reveal">
+        <div class="method-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13.5 6l-3 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Aprenda fazendo</h3>
+        <p>Projetos reais desde a primeira semana. O conceito entra depois que a mão já sujou de código.</p>
+      </article>
+      <article class="method-card reveal">
+        <div class="method-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Mentoria semanal</h3>
+        <p>Dúvida trancada é aluno parado. Mentorias recorrentes com quem já vive o mercado.</p>
+      </article>
+      <article class="method-card reveal">
+        <div class="method-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v12H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Comunidade ativa</h3>
+        <p>Gente estudando o mesmo tema, no mesmo momento que você. Ninguém termina o módulo sozinho.</p>
+      </article>
+      <article class="method-card reveal">
+        <div class="method-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Vagas exclusivas</h3>
+        <p>Oportunidades compartilhadas direto na comunidade pra quem já está pronto pra aplicar.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= TRILHA / CAMINHO ================= -->
+  <section class="caminho" id="caminho">
+    <div class="section-head reveal">
+      <p class="eyebrow">// a trilha</p>
+      <h2>Um caminho, passo a passo,<br>do zero ao Elite.</h2>
+      <p class="section-sub">A ordem aqui importa: cada etapa constrói a base pra próxima.</p>
+    </div>
+
+    <ol class="timeline">
+      <li class="timeline-item reveal">
+        <div class="timeline-marker"><span>01</span></div>
+        <div class="timeline-content">
+          <h3>Fundamentos &amp; Front-end</h3>
+          <p>Lógica de programação, HTML, CSS e JavaScript — a base de qualquer interface que existe na web.</p>
+          <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+        </div>
+      </li>
+      <li class="timeline-item reveal">
+        <div class="timeline-marker"><span>02</span></div>
+        <div class="timeline-content">
+          <h3>React &amp; Back-end</h3>
+          <p>Interfaces reativas com React e a lógica do outro lado da tela com Node.js e banco de dados.</p>
+          <div class="tag-row"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">APIs</span></div>
+        </div>
+      </li>
+      <li class="timeline-item reveal">
+        <div class="timeline-marker"><span>03</span></div>
+        <div class="timeline-content">
+          <h3>Projetos reais &amp; portfólio</h3>
+          <p>Sistemas completos do zero, do wireframe ao deploy — o que vira portfólio pra mostrar em entrevista.</p>
+          <div class="tag-row"><span class="tag">Deploy</span><span class="tag">Git</span><span class="tag">Portfólio</span></div>
+        </div>
+      </li>
+      <li class="timeline-item reveal">
+        <div class="timeline-marker"><span>04</span></div>
+        <div class="timeline-content">
+          <h3>DevClub Elite</h3>
+          <p>Formação avançada pra quem quer ir além do primeiro emprego: arquitetura, boas práticas e temas de mercado.</p>
+          <div class="tag-row"><span class="tag">Arquitetura</span><span class="tag">Carreira</span></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ================= ALÉM DO CÓDIGO ================= -->
+  <section class="alem-codigo">
+    <div class="alem-grid">
+      <div class="alem-copy reveal">
+        <p class="eyebrow">// além do código</p>
+        <h2>Tudo que você precisa além<br>do código pra evoluir mais rápido.</h2>
+        <ul class="check-list">
+          <li><span class="check-ico">✓</span>Mentorias semanais com profissionais de tecnologia do mercado</li>
+          <li><span class="check-ico">✓</span>Comunidade ativa de alunos trocando experiência todos os dias</li>
+          <li><span class="check-ico">✓</span>Suporte humano pra destravar dúvida sem enrolação</li>
+          <li><span class="check-ico">✓</span>Vagas de emprego compartilhadas direto na comunidade</li>
+          <li><span class="check-ico">✓</span>Playground pra treinar código sem sair da plataforma</li>
+        </ul>
+      </div>
+      <div class="alem-visual reveal">
+        <div class="platform-card">
+          <div class="platform-card-head">
+            <span class="platform-dot"></span>
+            <p>Plataforma de ensino</p>
+          </div>
+          <h4>Acesso a toda a plataforma, com suporte dos professores</h4>
+          <div class="platform-list">
+            <div class="platform-row"><span class="prow-thumb"></span><div><strong>Fundamentos de JavaScript</strong><span>aula 04 · em andamento</span></div></div>
+            <div class="platform-row"><span class="prow-thumb prow-thumb-2"></span><div><strong>Componentes com React</strong><span>aula 02 · continuar assistindo</span></div></div>
+            <div class="platform-row"><span class="prow-thumb prow-thumb-3"></span><div><strong>API com Node.js</strong><span>próxima aula</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJETOS REAIS ================= -->
+  <section class="projetos">
+    <div class="section-head reveal">
+      <p class="eyebrow">// mão na massa</p>
+      <h2>Tudo com projetos práticos<br>e reais.</h2>
+      <p class="section-sub">Nada de exercício solto: cada módulo entrega um projeto pra colocar no portfólio.</p>
+    </div>
+    <div class="projetos-stack reveal">
+      <div class="projeto-card projeto-1">
+        <div class="projeto-thumb"><span class="pj-tag">landing page</span><h4>Marca pessoal, do zero ao ar</h4></div>
+        <p>Página de apresentação profissional com HTML, CSS e animações.</p>
+      </div>
+      <div class="projeto-card projeto-2">
+        <div class="projeto-thumb"><span class="pj-tag">dashboard</span><h4>Painel administrativo</h4></div>
+        <p>Interface de gestão em React consumindo uma API própria.</p>
+      </div>
+      <div class="projeto-card projeto-3">
+        <div class="projeto-thumb"><span class="pj-tag">fullstack</span><h4>App de tarefas com login</h4></div>
+        <p>Sistema completo: front-end, back-end e banco de dados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEPOIMENTOS ================= -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="section-head reveal">
+      <p class="eyebrow">// vidas transformadas</p>
+      <h2>Milhares de histórias dentro<br>da nossa comunidade.</h2>
+    </div>
+
+    <div class="testimonial-carousel reveal">
+      <div class="testimonial-track" id="testiTrack">
+        <article class="testimonial-card">
+          <div class="testi-media"><span class="testi-avatar" style="--h:210">MA</span></div>
+          <p class="quote">"Comecei sem nunca ter aberto um código na vida. Hoje entendo o que estou construindo — a didática segura muito nos primeiros meses."</p>
+          <div class="testimonial-author"><span class="avatar-mini" style="--h:210"></span><div><strong>Marina A.</strong><span>ex-iniciante, hoje dev front-end</span></div></div>
+        </article>
+        <article class="testimonial-card">
+          <div class="testi-media"><span class="testi-avatar" style="--h:150">DS</span></div>
+          <p class="quote">"O que mais mudou o jogo foi ter gente pra tirar dúvida no mesmo dia. Trancar sozinho em código é o que mais desanima, e isso aqui resolve."</p>
+          <div class="testimonial-author"><span class="avatar-mini" style="--h:150"></span><div><strong>Diego S.</strong><span>trocou de carreira para TI</span></div></div>
+        </article>
+        <article class="testimonial-card">
+          <div class="testi-media"><span class="testi-avatar" style="--h:30">CR</span></div>
+          <p class="quote">"Os projetos práticos foram o que me deu confiança pra mostrar portfólio em entrevista. Sem eles eu não teria o que apresentar."</p>
+          <div class="testimonial-author"><span class="avatar-mini" style="--h:30"></span><div><strong>Carla R.</strong><span>fullstack júnior</span></div></div>
+        </article>
+        <article class="testimonial-card">
+          <div class="testi-media"><span class="testi-avatar" style="--h:280">PL</span></div>
+          <p class="quote">"A comunidade puxa você pra frente nos dias ruins. Ver outras pessoas travadas no mesmo exercício e destravando junto ajuda mais do que parece."</p>
+          <div class="testimonial-author"><span class="avatar-mini" style="--h:280"></span><div><strong>Pedro L.</strong><span>desenvolvedor back-end</span></div></div>
+        </article>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="prevTesti" aria-label="Depoimento anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-btn" id="nextTesti" aria-label="Próximo depoimento">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <p class="testimonial-disclaimer">*Depoimentos e avatares ilustrativos (sem fotos ou vídeos reais), escritos com base em temas recorrentes entre alunos de formações do gênero — substitua por relatos reais, com autorização, ao publicar.</p>
+    </div>
+  </section>
+
+  <!-- ================= APRENDA COM OS MELHORES ================= -->
+  <section class="instrutor" id="instrutor">
+    <div class="section-head reveal">
+      <p class="eyebrow">// quem ensina</p>
+      <h2>Aprenda com quem<br>vive o mercado.</h2>
+    </div>
+
+    <div class="faculty-grid reveal">
+      <article class="faculty-card faculty-lead">
+        <div class="faculty-photo faculty-photo-1"></div>
+        <div class="faculty-info"><strong>Rodolfo Mori</strong><span>Criador do DevClub</span></div>
+      </article>
+      <article class="faculty-card">
+        <div class="faculty-photo faculty-photo-2"></div>
+        <div class="faculty-info"><strong>Fernanda A.</strong><span>Front-end Specialist</span></div>
+      </article>
+      <article class="faculty-card">
+        <div class="faculty-photo faculty-photo-3"></div>
+        <div class="faculty-info"><strong>Henrique T.</strong><span>Back-end Specialist</span></div>
+      </article>
+      <article class="faculty-card">
+        <div class="faculty-photo faculty-photo-4"></div>
+        <div class="faculty-info"><strong>Juliana P.</strong><span>Carreira Tech</span></div>
+      </article>
+    </div>
+
+    <div class="instrutor-bio reveal">
+      <p>
+        Depois de anos vivendo o dia a dia da programação, Rodolfo criou o DevClub
+        com um objetivo direto: tirar qualquer pessoa do zero absoluto e levá-la
+        até o primeiro emprego como desenvolvedor — com aula clara, prática desde
+        o primeiro dia e acompanhamento de verdade.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= MÓDULOS BÔNUS ================= -->
+  <section class="bonus">
+    <div class="section-head reveal">
+      <p class="eyebrow">// pra ir mais longe</p>
+      <h2>Módulos bônus com os maiores<br>especialistas do segmento.</h2>
+    </div>
+    <div class="marquee marquee-mask">
+      <div class="marquee-track marquee-reverse" id="bonusTrack"></div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICADO ================= -->
+  <section class="certificado">
+    <div class="cert-grid">
+      <div class="cert-copy reveal">
+        <p class="eyebrow">// reconhecimento</p>
+        <h2>Certificado de conclusão<br>pra fechar cada etapa.</h2>
+        <p class="section-sub">Ao concluir cada formação, você recebe um certificado — pra colocar no currículo e no LinkedIn.</p>
+      </div>
+      <div class="cert-visual reveal">
+        <div class="cert-card">
+          <div class="cert-card-top"><span class="cert-badge">✓</span><span>DevClub</span></div>
+          <h4>Certificado de Conclusão<br>Formação FullStack Pro</h4>
+          <p class="cert-name">emitido para o(a) aluno(a)</p>
+          <div class="cert-sign"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MBA EM IA ================= -->
+  <section class="mba" id="mba">
+    <div class="mba-grid">
+      <div class="mba-copy reveal">
+        <p class="eyebrow">// pra quem quer ir além</p>
+        <h2>Depois do FullStack Pro, um MBA reconhecido pelo MEC.</h2>
+        <p class="section-sub">
+          Em parceria com a Faculdade Sirius, o DevClub também oferece uma pós-graduação
+          em Inteligência Artificial — pra quem quer aprofundar, automatizar negócios
+          e sair na frente no mercado, com ou sem experiência prévia em IA.
+        </p>
+        <ul class="check-list">
+          <li><span class="check-ico">✓</span>Diploma de MBA reconhecido pelo MEC, com nota máxima no conceito institucional</li>
+          <li><span class="check-ico">✓</span>Trilhas de certificação internacional — Harvard, MIT, Stanford, IBM e AWS Academy</li>
+          <li><span class="check-ico">✓</span>12 meses de formação, com 18 meses de acesso à plataforma</li>
+          <li><span class="check-ico">✓</span>100% online: aulas gravadas no seu ritmo + encontros ao vivo com mentores</li>
+          <li><span class="check-ico">✓</span>Sem TCC tradicional — um Master Project prático ao final de cada trimestre</li>
+          <li><span class="check-ico">✓</span>Acesso incluso a ferramentas de IA, como ChatGPT, Claude, Gemini e GitHub Copilot</li>
+        </ul>
+        <a href="#" class="btn btn-primary" data-open-modal="matricula" data-interesse="MBA em Inteligência Artificial">
+          <span>Quero minha pré-matrícula no MBA</span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <p class="cta-note">Formulário de demonstração — nenhum dado é enviado a um servidor real.</p>
+      </div>
+
+      <div class="mba-visual reveal">
+        <div class="mba-card">
+          <div class="mba-card-top"><span class="mba-badge">✓</span><span>Nota 5 (máxima) no MEC</span></div>
+          <h4>MBA em Inteligência Artificial<br>e Automações para Negócios</h4>
+          <p class="mba-partner">DevClub &amp; Faculdade Sirius</p>
+          <div class="mba-quarters">
+            <div class="mba-q"><span>T1</span>Fundamentos &amp; Prompt Engineering</div>
+            <div class="mba-q"><span>T2</span>Automação &amp; Agentes de IA</div>
+            <div class="mba-q"><span>T3</span>Estratégia &amp; Dados</div>
+            <div class="mba-q"><span>T4</span>Projetos Avançados &amp; Carreira</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mercado">
+    <div class="section-head reveal">
+      <p class="eyebrow">// e na prática, o mercado paga bem?</p>
+      <h2>Dev Full Stack | Faixas salariais<br><span class="chart-note">valores anuais aproximados, ilustrativos</span></h2>
+    </div>
+    <div class="chart-card reveal" id="chartCard">
+      <div class="chart-row">
+        <span class="chart-label">Júnior</span>
+        <div class="chart-bars">
+          <div class="bar-wrap"><div class="bar bar-br" data-width="34"></div><span class="bar-value">R$ 48 mil</span></div>
+          <div class="bar-wrap"><div class="bar bar-intl" data-width="55"></div><span class="bar-value">R$ 78 mil</span></div>
+        </div>
+      </div>
+      <div class="chart-row">
+        <span class="chart-label">Pleno</span>
+        <div class="chart-bars">
+          <div class="bar-wrap"><div class="bar bar-br" data-width="58"></div><span class="bar-value">R$ 82 mil</span></div>
+          <div class="bar-wrap"><div class="bar bar-intl" data-width="82"></div><span class="bar-value">R$ 116 mil</span></div>
+        </div>
+      </div>
+      <div class="chart-row">
+        <span class="chart-label">Sênior</span>
+        <div class="chart-bars">
+          <div class="bar-wrap"><div class="bar bar-br" data-width="80"></div><span class="bar-value">R$ 128 mil</span></div>
+          <div class="bar-wrap"><div class="bar bar-intl" data-width="100"></div><span class="bar-value">R$ 172 mil</span></div>
+        </div>
+      </div>
+      <div class="chart-legend"><span><i class="leg-br"></i>Brasil</span><span><i class="leg-intl"></i>Internacional</span></div>
+    </div>
+  </section>
+
+  <!-- ================= GARANTIA ================= -->
+  <section class="garantia">
+    <div class="garantia-card reveal">
+      <div class="garantia-icon" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2>7 dias de garantia incondicional</h2>
+      <p>Explore a plataforma, as aulas e a comunidade. Se não for pra você, é só pedir reembolso — sem burocracia, sem letra miúda.</p>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq" id="faq">
+    <div class="section-head reveal">
+      <p class="eyebrow">// perguntas frequentes</p>
+      <h2>Ainda com dúvida?</h2>
+    </div>
+    <div class="faq-list reveal" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q"><span>É pra quem tá começando do zero, sem experiência nenhuma?</span><span class="faq-plus">+</span></button>
+        <div class="faq-a"><p>Sim. A formação foi pensada pra quem nunca escreveu uma linha de código — a trilha começa nos fundamentos antes de qualquer tecnologia.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Preciso saber alguma coisa de programação antes?</span><span class="faq-plus">+</span></button>
+        <div class="faq-a"><p>Não. Todo o conteúdo parte do zero absoluto, em ordem, sem pular etapa.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Tem certificado ao final?</span><span class="faq-plus">+</span></button>
+        <div class="faq-a"><p>Sim, você recebe certificado de conclusão a cada etapa concluída da formação.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Já trabalho com programação, ainda vale a pena?</span><span class="faq-plus">+</span></button>
+        <div class="faq-a"><p>Sim — os módulos avançados e o DevClub Elite foram pensados pra quem quer aprofundar e crescer na carreira.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Dá pra parcelar o investimento?</span><span class="faq-plus">+</span></button>
+        <div class="faq-a"><p>As condições de pagamento ficam disponíveis na página oficial de inscrição, com opções parceladas.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Até quando posso me inscrever?</span><span class="faq-plus">+</span></button>
+        <div class="faq-a"><p>As turmas e condições de matrícula são divulgadas no site oficial do DevClub.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>O MBA em IA é diferente da Formação FullStack Pro?</span><span class="faq-plus">+</span></button>
+        <div class="faq-a"><p>Sim. O FullStack Pro é focado em programação (front-end e back-end). O MBA é uma pós-graduação em parceria com a Faculdade Sirius, focada em Inteligência Artificial e automação de negócios, com diploma reconhecido pelo MEC.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Preciso ter graduação pra fazer o MBA em IA?</span><span class="faq-plus">+</span></button>
+        <div class="faq-a"><p>Para receber o diploma de MBA, sim — é necessário ensino superior completo em qualquer área. Sem graduação, você pode participar e recebe um certificado de extensão universitária.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="cta-final" id="cta-final">
+    <div class="cta-bg" aria-hidden="true">
+      <div class="grid-lines"></div>
+      <div class="glow glow-1"></div>
+    </div>
+    <div class="cta-inner reveal">
+      <p class="eyebrow"><span class="dot-pulse"></span>sua próxima linha de código começa aqui</p>
+      <h2>Pronto pra sair do<br><span class="highlight">"eu não sei nada"</span>?</h2>
+      <p class="section-sub">
+        Front-end, back-end, projetos reais e uma comunidade inteira estudando
+        junto com você. O primeiro passo é decidir começar.
+      </p>
+            <a href="#" class="btn btn-primary btn-lg" data-open-modal="matricula" data-interesse="Formação FullStack Pro">
+        <span>Quero começar minha matrícula</span>
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="cta-note">Formulário de demonstração — nenhum dado é enviado a um servidor real.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#top" class="logo">
+      <span class="logo-bracket">&lt;</span>DevClub<span class="logo-bracket">/&gt;</span>
+    </a>
+    <p class="footer-copy">Formação FullStack Pro — do zero ao primeiro emprego como dev.</p>
+    <div class="footer-social" aria-hidden="true">
+      <span class="social-ico"></span><span class="social-ico"></span><span class="social-ico"></span><span class="social-ico"></span>
+    </div>
+    <div class="footer-links">
+      <a href="#metodo">Método</a>
+      <a href="#caminho">Trilha</a>
+      <a href="#mba">MBA em IA</a>
+      <a href="#depoimentos">Alunos</a>
+      <a href="#instrutor">Mentores</a>
+      <a href="#faq">Dúvidas</a>
+    </div>
+  </div>
+  <p class="footer-fine">Página institucional independente, feita como referência de estilo. Não é o site oficial.</p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 13V3M3 7l5-5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<!-- ================= MODAIS ================= -->
+<div class="modal-overlay" id="modalOverlay" data-close-modal></div>
+
+<div class="modal" id="modalLogin" role="dialog" aria-modal="true" aria-labelledby="modalLoginTitle" aria-hidden="true">
+  <button class="modal-close" type="button" data-close-modal aria-label="Fechar">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+  <div class="modal-icon" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </div>
+  <h3 id="modalLoginTitle">Área do aluno</h3>
+  <p class="modal-sub" id="modalLoginSub">Entre com seu e-mail e senha para acessar a plataforma.</p>
+
+  <form id="formLogin" novalidate>
+    <label class="field">
+      <span>E-mail</span>
+      <input type="email" name="email" required placeholder="voce@email.com" autocomplete="email">
+      <span class="field-error" data-error-for="email"></span>
+    </label>
+    <label class="field" data-field="senha">
+      <span>Senha</span>
+      <input type="password" name="senha" required minlength="6" placeholder="••••••••" autocomplete="current-password">
+      <span class="field-error" data-error-for="senha"></span>
+    </label>
+    <label class="field-check" data-field="lembrar">
+      <input type="checkbox" name="lembrar"><span>Lembrar de mim</span>
+    </label>
+    <button type="submit" class="btn btn-primary modal-submit"><span>Entrar</span></button>
+    <button type="button" class="modal-link" id="forgotPasswordBtn">Esqueci minha senha</button>
+  </form>
+
+  <div class="modal-success" id="modalLoginSuccess" hidden>
+    <div class="success-check">✓</div>
+    <h4>Login simulado com sucesso!</h4>
+    <p>Em um ambiente de produção, você seria redirecionado(a) para a sua área do aluno agora.</p>
+    <button type="button" class="btn btn-ghost" data-close-modal>Fechar</button>
+  </div>
+
+  <p class="modal-disclaimer">* Formulário de demonstração — não envia dados a nenhum servidor.</p>
+</div>
+
+<div class="modal" id="modalMatricula" role="dialog" aria-modal="true" aria-labelledby="modalMatriculaTitle" aria-hidden="true">
+  <button class="modal-close" type="button" data-close-modal aria-label="Fechar">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+  <div class="modal-icon" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <h3 id="modalMatriculaTitle">Quero fazer parte</h3>
+  <p class="modal-sub" id="modalMatriculaSub">Preencha seus dados e dê o primeiro passo.</p>
+
+  <form id="formMatricula" novalidate>
+    <label class="field">
+      <span>Nome completo</span>
+      <input type="text" name="nome" required placeholder="Seu nome" autocomplete="name">
+      <span class="field-error" data-error-for="nome"></span>
+    </label>
+    <label class="field">
+      <span>E-mail</span>
+      <input type="email" name="email" required placeholder="voce@email.com" autocomplete="email">
+      <span class="field-error" data-error-for="email"></span>
+    </label>
+    <label class="field">
+      <span>WhatsApp</span>
+      <input type="tel" name="telefone" required minlength="8" placeholder="(00) 00000-0000" autocomplete="tel">
+      <span class="field-error" data-error-for="telefone"></span>
+    </label>
+    <label class="field">
+      <span>Tenho interesse em</span>
+      <select name="interesse" id="matriculaInteresse">
+        <option value="Formação FullStack Pro">Formação FullStack Pro</option>
+        <option value="MBA em Inteligência Artificial">MBA em Inteligência Artificial</option>
+        <option value="Ainda não sei">Ainda não sei</option>
+      </select>
+    </label>
+    <button type="submit" class="btn btn-primary modal-submit"><span>Quero começar</span></button>
+  </form>
+
+  <div class="modal-success" id="modalMatriculaSuccess" hidden>
+    <div class="success-check">✓</div>
+    <h4>Recebemos seus dados!</h4>
+    <p>Em um cenário real, nossa equipe entraria em contato em até 1 dia útil.</p>
+    <button type="button" class="btn btn-ghost" data-close-modal>Fechar</button>
+  </div>
+
+  <p class="modal-disclaimer">* Formulário de demonstração — não envia dados a nenhum servidor.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

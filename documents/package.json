@@ -1,0 +1,21 @@
+{
+  "name": "devclub-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Página institucional não-oficial (HTML, CSS e JavaScript puros) inspirada no devclub.com.br, feita como estudo de front-end e animação.",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx --yes serve . -l 8080",
+    "start": "npx --yes serve . -l 8080"
+  },
+  "keywords": [
+    "landing-page",
+    "html5",
+    "css3",
+    "javascript",
+    "canvas",
+    "animacao",
+    "front-end"
+  ]
+}
