@@ -13,7 +13,7 @@ Landing page institucional não-oficial, construída como estudo de estilo e ani
 </div>
 
 <p align="center">
-  <img src="/preview.jpg" alt="Preview da hero section com a cortina de cubos 3D animada" width="100%">
+  <img src="docs/preview.jpg" alt="Preview da hero section com a cortina de cubos 3D animada" width="100%">
 </p>
 
 ---
