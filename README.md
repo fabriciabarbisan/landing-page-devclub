@@ -1,20 +1,19 @@
-<div align="center">
-
-# &lt;DevClub/&gt; — Página Institucional
+# <DevClub/> — Página Institucional
 
 Landing page institucional não-oficial, construída como estudo de estilo e animação para uma formação fullstack, com HTML, CSS e JavaScript puros.
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](#)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](#)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](#)
-[![Licença: MIT](https://img.shields.io/badge/Licença-MIT-4CF2AE.svg)](LICENSE)
+[![Deploy: Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://landing-page-devclub.vercel.app/)
+[![Licença: MIT](https://img.shields.io/badge/Licen%C3%A7a-MIT-4CF2AE.svg)](LICENSE)
 [![PRs bem-vindos](https://img.shields.io/badge/PRs-bem--vindos-4CF2AE.svg)](CONTRIBUTING.md)
 
-</div>
+## 🌐 Ver o site no ar
 
-<p align="center">
-  <img src="/preview.jpg" alt="Preview da hero section com a cortina de cubos 3D animada" width="100%">
-</p>
+**👉 [landing-page-devclub.vercel.app](https://landing-page-devclub.vercel.app/)**
+
+[![Preview da hero section com a cortina de cubos 3D animada](docs/preview.jpg)](https://landing-page-devclub.vercel.app/)
 
 ---
 
@@ -40,12 +39,13 @@ Este é um **projeto independente e não-oficial**, feito como exercício de fro
 
 ## 🧱 Tecnologias
 
-| Camada       | Tecnologia                                              |
-|--------------|-----------------------------------------------------------|
-| Estrutura    | HTML5 semântico                                            |
-| Estilo       | CSS3 puro (custom properties, grid, flexbox, `mask-image`) |
-| Interação    | JavaScript (ES6+), sem frameworks ou bibliotecas externas  |
-| Tipografia   | [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk), [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) e [Manrope](https://fonts.google.com/specimen/Manrope), via Google Fonts |
+| Camada     | Tecnologia                                                                                                                                                                                               |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Estrutura  | HTML5 semântico                                                                                                                                                                                          |
+| Estilo     | CSS3 puro (custom properties, grid, flexbox, `mask-image`)                                                                                                                                               |
+| Interação  | JavaScript (ES6+), sem frameworks ou bibliotecas externas                                                                                                                                                |
+| Tipografia | [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk), [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) e [Manrope](https://fonts.google.com/specimen/Manrope), via Google Fonts |
+| Hospedagem | [Vercel](https://vercel.com/) — [landing-page-devclub.vercel.app](https://landing-page-devclub.vercel.app/)                                                                                              |
 
 Não há bundler, transpilador ou gerenciador de pacotes obrigatório — o projeto é HTML/CSS/JS estático "puro".
 
@@ -64,29 +64,6 @@ devclub-site/
 ├── package.json          # metadados + atalho opcional para servir localmente
 └── .gitignore
 ```
-
-## 🚀 Como rodar localmente
-
-Por ser um site estático, **não há instalação nem build**. Basta servir os arquivos — abrir o `index.html` direto no navegador funciona, mas alguns navegadores restringem `fetch`/módulos em `file://`, então o recomendado é subir um servidor local simples:
-
-```bash
-# clonar o repositório
-git clone https://github.com/<seu-usuario>/<seu-repositorio>.git
-cd <seu-repositorio>
-
-# opção 1 — Python (já vem instalado na maioria dos sistemas)
-python3 -m http.server 8080
-
-# opção 2 — Node, sem instalar nada globalmente
-npx serve .
-
-# opção 3 — usando o script já configurado no package.json
-npm run dev
-```
-
-Depois é só abrir **http://localhost:8080** (ou a porta indicada no terminal).
-
-Se preferir, também funciona com a extensão **Live Server** do VS Code — clique com o botão direito em `index.html` → "Open with Live Server".
 
 ## 🎨 Customização
 
@@ -108,13 +85,13 @@ Trocar esses valores já propaga a mudança para o site inteiro (botões, ícone
 
 A cortina de cubos 3D do hero pode ser ajustada em `script.js`, dentro de `initWaveGrid()`:
 
-| Variável      | O que controla                                             |
-|---------------|--------------------------------------------------------------|
-| `spacing`     | Distância entre os cubos (densidade da grade)                |
-| `cellFill`    | Tamanho do cubo em relação ao espaçamento (0–1)               |
-| `waveAmp`     | Intensidade da ondulação automática (para frente/trás)        |
-| `rippleAmp`   | Força do "empurrão" que o cursor causa na grade               |
-| `swayAmp`     | Intensidade do balanço lateral                                |
+| Variável    | O que controla                                         |
+| ----------- | ------------------------------------------------------ |
+| `spacing`   | Distância entre os cubos (densidade da grade)          |
+| `cellFill`  | Tamanho do cubo em relação ao espaçamento (0–1)        |
+| `waveAmp`   | Intensidade da ondulação automática (para frente/trás) |
+| `rippleAmp` | Força do "empurrão" que o cursor causa na grade        |
+| `swayAmp`   | Intensidade do balanço lateral                         |
 
 ## ♿ Acessibilidade e performance
 
@@ -127,7 +104,7 @@ A cortina de cubos 3D do hero pode ser ajustada em `script.js`, dentro de `initW
 
 - [ ] Substituir depoimentos, nomes de instrutores e valores salariais ilustrativos por conteúdo real (caso o projeto vire algo oficial).
 - [ ] Adicionar testes automatizados de acessibilidade (ex.: `axe-core`).
-- [ ] Configurar deploy automático (GitHub Pages, Vercel ou Netlify) via GitHub Actions.
+- [x] Publicar o site online (deploy na Vercel).
 - [ ] Adicionar meta tags Open Graph com imagem de preview própria.
 
 ## 🤝 Contribuindo
@@ -142,6 +119,4 @@ Isso **não** se estende à marca, identidade visual, textos originais ou qualqu
 
 ---
 
-<div align="center">
-  <sub>Feito como estudo de front-end e animações web. Não afiliado ao DevClub oficial.</sub>
-</div>
+Feito como estudo de front-end e animações web. Não afiliado ao DevClub oficial.
